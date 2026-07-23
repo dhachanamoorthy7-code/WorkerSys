@@ -356,7 +356,7 @@ export const WorkerManagement = () => {
             placeholder={t("searchPlaceholder")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full rounded-xl border border-slate-200/80 bg-slate-50 pl-10 pr-4 py-2 text-sm outline-none focus:border-blue-500 focus:bg-white dark:border-slate-800 dark:bg-slate-950 dark:focus:border-blue-500"
+            className="w-full rounded-xl border border-slate-200/80 bg-slate-50 pl-10 pr-4 py-2 text-sm outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:focus:border-blue-500"
           />
         </div>
 
@@ -732,7 +732,7 @@ export const WorkerManagement = () => {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:border-slate-800 dark:bg-slate-950"
+                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 dark:border-slate-800 dark:bg-slate-950"
                   />
                 </div>
 
@@ -745,7 +745,7 @@ export const WorkerManagement = () => {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:border-slate-800 dark:bg-slate-950"
+                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 dark:border-slate-800 dark:bg-slate-950"
                   />
                 </div>
 
@@ -759,7 +759,7 @@ export const WorkerManagement = () => {
                     required
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:border-slate-800 dark:bg-slate-950"
+                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 dark:border-slate-800 dark:bg-slate-950"
                   />
                 </div>
 
@@ -792,7 +792,7 @@ export const WorkerManagement = () => {
                     value={designation}
                     onChange={(e) => setDesignation(e.target.value)}
                     placeholder="e.g. CNC Operator"
-                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:border-slate-800 dark:bg-slate-950"
+                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 dark:border-slate-800 dark:bg-slate-950"
                   />
                 </div>
 
@@ -827,7 +827,7 @@ export const WorkerManagement = () => {
                     type="number"
                     value={salary}
                     onChange={(e) => setSalary(e.target.value)}
-                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:border-slate-800 dark:bg-slate-950 disabled:opacity-50"
+                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 dark:border-slate-800 dark:bg-slate-950 disabled:opacity-50"
                   />
                 </div>
 
@@ -840,7 +840,7 @@ export const WorkerManagement = () => {
                     type="date"
                     value={dateOfJoining}
                     onChange={(e) => setDateOfJoining(e.target.value)}
-                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:border-slate-800 dark:bg-slate-950"
+                    className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 dark:border-slate-800 dark:bg-slate-950"
                   />
                 </div>
               </div>
@@ -854,7 +854,7 @@ export const WorkerManagement = () => {
                   type="text"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:border-slate-800 dark:bg-slate-950"
+                  className="w-full rounded-xl border border-slate-200/80 bg-slate-50 px-3.5 py-2.5 text-xs outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 dark:border-slate-800 dark:bg-slate-950"
                 />
               </div>
 

@@ -331,7 +331,7 @@ export const AttendanceManagement = () => {
                 placeholder="Search workers to log..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full rounded-xl border border-slate-200 bg-slate-50 pl-9 pr-4 py-1.5 text-xs outline-none focus:bg-white dark:border-slate-800 dark:bg-slate-950"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 pl-9 pr-4 py-1.5 text-xs outline-none focus:bg-white dark:focus:bg-slate-900 dark:border-slate-800 dark:bg-slate-950"
               />
             </div>
           </Card>

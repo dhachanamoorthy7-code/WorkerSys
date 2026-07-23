@@ -94,7 +94,7 @@ export const WorkerStatusBoard = () => {
             placeholder="Search workers on shift..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full rounded-xl border border-slate-200/80 bg-slate-50 pl-10 pr-4 py-2 text-sm outline-none focus:border-blue-500 focus:bg-white dark:border-slate-805 dark:bg-slate-950"
+            className="w-full rounded-xl border border-slate-200/80 bg-slate-50 pl-10 pr-4 py-2 text-sm outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 dark:border-slate-805 dark:bg-slate-950"
           />
         </div>
 
