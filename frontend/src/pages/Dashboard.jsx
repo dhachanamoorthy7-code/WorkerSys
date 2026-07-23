@@ -10,6 +10,7 @@ import {
   TrendingUp,
   ListFilter,
   CalendarDays,
+  WifiOff,
 } from "lucide-react";
 import { Card } from "../components/ui/Card";
 import { Badge } from "../components/ui/Badge";
@@ -79,11 +80,27 @@ export const Dashboard = () => {
     }
   };
 
-  if (loading || !metrics) {
+  if (loading) {
     return (
       <div className="flex h-64 items-center justify-center">
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-500 border-t-transparent" />
       </div>
+    );
+  }
+
+  if (!metrics) {
+    return (
+      <Card className="p-8 text-center text-slate-400 h-64 flex flex-col justify-center items-center">
+        <WifiOff size={40} className="text-amber-500 mb-4 animate-bounce" />
+        <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-2">Connection Failed</h3>
+        <p className="text-xs max-w-xs">Unable to load dashboard metrics. Please check if the API server is running on port 5000.</p>
+        <button 
+          onClick={fetchDashboardData}
+          className="mt-4 rounded-xl bg-blue-600 px-4 py-2 text-xs font-semibold text-white hover:bg-blue-700 transition-all"
+        >
+          Retry Connection
+        </button>
+      </Card>
     );
   }
 

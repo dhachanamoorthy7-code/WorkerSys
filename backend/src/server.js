@@ -58,6 +58,6 @@ app.use((err, req, res, next) => {
 });
 
 // Start Server
-app.listen(PORT, () => {
-  console.log(`[Server] Running on port http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`[Server] Running on port http://127.0.0.1:${PORT}`);
 });

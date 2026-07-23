@@ -61,100 +61,6 @@
   ],
   "workers": [
     {
-      "id": "W-101",
-      "name": "Robert Miller",
-      "email": "robert.m@workplace.com",
-      "phone": "+1 (555) 019-2834",
-      "department": "Production",
-      "designation": "Senior CNC Operator",
-      "address": "742 Evergreen Terrace, Springfield",
-      "dateOfJoining": "2022-04-12",
-      "shiftTiming": "08:00 AM - 04:00 PM",
-      "salary": 45000,
-      "status": "Working",
-      "performanceRating": 4.8,
-      "emergencyContact": {
-        "name": "Sarah Miller",
-        "relation": "Spouse",
-        "phone": "+1 (555) 019-2835"
-      },
-      "photo": "",
-      "documents": [
-        "ID_Card_W101.pdf",
-        "Employment_Contract.pdf"
-      ]
-    },
-    {
-      "id": "W-102",
-      "name": "Elena Rostova",
-      "email": "elena.r@workplace.com",
-      "phone": "+1 (555) 014-9988",
-      "department": "Quality",
-      "designation": "QA Lead Inspector",
-      "address": "104 Baker St, London",
-      "dateOfJoining": "2023-01-15",
-      "shiftTiming": "08:00 AM - 04:00 PM",
-      "salary": 52000,
-      "status": "Active",
-      "performanceRating": 4.9,
-      "emergencyContact": {
-        "name": "Dmitri Rostov",
-        "relation": "Brother",
-        "phone": "+1 (555) 014-9989"
-      },
-      "photo": "",
-      "documents": [
-        "Degree_QA.pdf",
-        "NDA.pdf"
-      ]
-    },
-    {
-      "id": "W-103",
-      "name": "Marcus Vance",
-      "email": "m.vance@workplace.com",
-      "phone": "+1 (555) 011-3443",
-      "department": "Warehouse",
-      "designation": "Forklift Operator",
-      "address": "405 Industrial Parkway, Sector 4",
-      "dateOfJoining": "2023-09-01",
-      "shiftTiming": "04:00 PM - 12:00 AM",
-      "salary": 38000,
-      "status": "On Break",
-      "performanceRating": 4.2,
-      "emergencyContact": {
-        "name": "Linda Vance",
-        "relation": "Mother",
-        "phone": "+1 (555) 011-3444"
-      },
-      "photo": "",
-      "documents": [
-        "Forklift_License.pdf"
-      ]
-    },
-    {
-      "id": "W-104",
-      "name": "Aisha Rahman",
-      "email": "aisha.r@workplace.com",
-      "phone": "+1 (555) 017-7722",
-      "department": "HR",
-      "designation": "HR Coordinator",
-      "address": "89 Maple Avenue, Flat 3B",
-      "dateOfJoining": "2024-02-10",
-      "shiftTiming": "09:00 AM - 05:00 PM",
-      "salary": 48000,
-      "status": "Active",
-      "performanceRating": 4.6,
-      "emergencyContact": {
-        "name": "Tariq Rahman",
-        "relation": "Father",
-        "phone": "+1 (555) 017-7723"
-      },
-      "photo": "",
-      "documents": [
-        "HR_Certification.pdf"
-      ]
-    },
-    {
       "id": "W-105",
       "name": "James O'Connor",
       "email": "james.oc@workplace.com",
@@ -243,29 +149,6 @@
       "documents": []
     },
     {
-      "id": "W-109",
-      "name": "Vikram Singh",
-      "email": "v.singh@workplace.com",
-      "phone": "+1 (555) 013-1122",
-      "department": "Security",
-      "designation": "Senior Security Officer",
-      "address": "22 G.T. Road, Amritsar",
-      "dateOfJoining": "2020-01-10",
-      "shiftTiming": "04:00 PM - 12:00 AM",
-      "salary": 34000,
-      "status": "Completed Shift",
-      "performanceRating": 4.7,
-      "emergencyContact": {
-        "name": "Gurpreet Kaur",
-        "relation": "Spouse",
-        "phone": "+1 (555) 013-1123"
-      },
-      "photo": "",
-      "documents": [
-        "Security_Clearance.pdf"
-      ]
-    },
-    {
       "id": "W-110",
       "name": "Thomas Mueller",
       "email": "t.mueller@workplace.com",
@@ -288,50 +171,6 @@
     }
   ],
   "attendance": [
-    {
-      "id": "att-1",
-      "workerId": "W-101",
-      "date": "2026-07-20",
-      "status": "Present",
-      "checkIn": "07:55 AM",
-      "checkOut": "04:05 PM",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-20T16:05:00Z"
-    },
-    {
-      "id": "att-2",
-      "workerId": "W-102",
-      "date": "2026-07-20",
-      "status": "Present",
-      "checkIn": "08:02 AM",
-      "checkOut": "04:02 PM",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 2,
-      "lastUpdated": "2026-07-20T16:02:00Z"
-    },
-    {
-      "id": "att-3",
-      "workerId": "W-103",
-      "date": "2026-07-20",
-      "status": "Present",
-      "checkIn": "03:50 PM",
-      "checkOut": "12:05 AM",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-21T00:05:00Z"
-    },
-    {
-      "id": "att-4",
-      "workerId": "W-104",
-      "date": "2026-07-20",
-      "status": "Present",
-      "checkIn": "08:58 AM",
-      "checkOut": "05:01 PM",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-20T17:01:00Z"
-    },
     {
       "id": "att-5",
       "workerId": "W-105",
@@ -377,17 +216,6 @@
       "lastUpdated": "2026-07-20T16:00:00Z"
     },
     {
-      "id": "att-9",
-      "workerId": "W-109",
-      "date": "2026-07-20",
-      "status": "Present",
-      "checkIn": "04:00 PM",
-      "checkOut": "12:00 AM",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-21T00:00:00Z"
-    },
-    {
       "id": "att-10",
       "workerId": "W-110",
       "date": "2026-07-20",
@@ -397,39 +225,6 @@
       "overtimeHours": 0,
       "lateEntryMinutes": 0,
       "lastUpdated": "2026-07-20T09:00:00Z"
-    },
-    {
-      "id": "att-11",
-      "workerId": "W-101",
-      "date": "2026-07-21",
-      "status": "Present",
-      "checkIn": "07:48 AM",
-      "checkOut": "--:--",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-21T07:48:00Z"
-    },
-    {
-      "id": "att-12",
-      "workerId": "W-102",
-      "date": "2026-07-21",
-      "status": "Present",
-      "checkIn": "07:58 AM",
-      "checkOut": "--:--",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-21T07:58:00Z"
-    },
-    {
-      "id": "att-14",
-      "workerId": "W-104",
-      "date": "2026-07-21",
-      "status": "Present",
-      "checkIn": "09:12 AM",
-      "checkOut": "--:--",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 12,
-      "lastUpdated": "2026-07-21T09:12:00Z"
     },
     {
       "id": "att-17",
@@ -482,6 +277,41 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "log-1784790217015-509",
+      "timestamp": "2026-07-23T07:03:37.015Z",
+      "user": "nandhakumar6112005@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker Vikram Singh (W-109) and related logs."
+    },
+    {
+      "id": "log-1784790214337-368",
+      "timestamp": "2026-07-23T07:03:34.337Z",
+      "user": "nandhakumar6112005@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker Aisha Rahman (W-104) and related logs."
+    },
+    {
+      "id": "log-1784790212208-274",
+      "timestamp": "2026-07-23T07:03:32.208Z",
+      "user": "nandhakumar6112005@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker Marcus Vance (W-103) and related logs."
+    },
+    {
+      "id": "log-1784790209914-476",
+      "timestamp": "2026-07-23T07:03:29.914Z",
+      "user": "nandhakumar6112005@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker Elena Rostova (W-102) and related logs."
+    },
+    {
+      "id": "log-1784790207723-838",
+      "timestamp": "2026-07-23T07:03:27.723Z",
+      "user": "nandhakumar6112005@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker Robert Miller (W-101) and related logs."
+    },
     {
       "id": "log-1784788022188-720",
       "timestamp": "2026-07-23T06:27:02.188Z",

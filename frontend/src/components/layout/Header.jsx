@@ -12,6 +12,7 @@ export const Header = ({ setMobileOpen }) => {
   const [notifications, setNotifications] = useState([]);
   const [showNotifDropdown, setShowNotifDropdown] = useState(false);
   const [isOnline, setIsOnline] = useState(true);
+  const isOfflineRef = React.useRef(false);
 
   useEffect(() => {
     fetchNotifications();
@@ -20,6 +21,7 @@ export const Header = ({ setMobileOpen }) => {
   }, []);
 
   const fetchNotifications = async () => {
+    if (isOfflineRef.current) return;
     try {
       const data = await api.admin.getNotifications();
       setNotifications(data);
@@ -31,7 +33,12 @@ export const Header = ({ setMobileOpen }) => {
   };
 
   const toggleOnline = () => {
-    setIsOnline(!isOnline);
+    isOfflineRef.current = !isOfflineRef.current;
+    if (isOfflineRef.current) {
+      setIsOnline(false);
+    } else {
+      fetchNotifications();
+    }
   };
 
   const markAllRead = async () => {
