@@ -1,0 +1,547 @@
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const DB_FILE = path.join(__dirname, "data.json");
+
+// Ensure db directory exists
+const dbDir = path.dirname(DB_FILE);
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
+
+// Initial Seed Data
+const initialData = {
+  users: [
+    {
+      email: "admin@system.com",
+      passwordHash: "admin123",
+      name: "System Administrator",
+      role: "Admin",
+    },
+    {
+      email: "hr@system.com",
+      passwordHash: "hr123",
+      name: "HR Manager",
+      role: "HR",
+    },
+    {
+      email: "supervisor@system.com",
+      passwordHash: "supervisor123",
+      name: "Shift Supervisor",
+      role: "Supervisor",
+    },
+  ],
+  departments: [
+    "Production",
+    "Packing",
+    "Quality",
+    "Maintenance",
+    "HR",
+    "Security",
+    "Warehouse",
+    "Administration",
+  ],
+  workers: [
+    {
+      id: "W-101",
+      name: "Robert Miller",
+      email: "robert.m@workplace.com",
+      phone: "+1 (555) 019-2834",
+      department: "Production",
+      designation: "Senior CNC Operator",
+      address: "742 Evergreen Terrace, Springfield",
+      dateOfJoining: "2022-04-12",
+      shiftTiming: "08:00 AM - 04:00 PM",
+      salary: 45000,
+      status: "Working",
+      performanceRating: 4.8,
+      emergencyContact: {
+        name: "Sarah Miller",
+        relation: "Spouse",
+        phone: "+1 (555) 019-2835",
+      },
+      photo: "",
+      documents: ["ID_Card_W101.pdf", "Employment_Contract.pdf"],
+    },
+    {
+      id: "W-102",
+      name: "Elena Rostova",
+      email: "elena.r@workplace.com",
+      phone: "+1 (555) 014-9988",
+      department: "Quality",
+      designation: "QA Lead Inspector",
+      address: "104 Baker St, London",
+      dateOfJoining: "2023-01-15",
+      shiftTiming: "08:00 AM - 04:00 PM",
+      salary: 52000,
+      status: "Active",
+      performanceRating: 4.9,
+      emergencyContact: {
+        name: "Dmitri Rostov",
+        relation: "Brother",
+        phone: "+1 (555) 014-9989",
+      },
+      photo: "",
+      documents: ["Degree_QA.pdf", "NDA.pdf"],
+    },
+    {
+      id: "W-103",
+      name: "Marcus Vance",
+      email: "m.vance@workplace.com",
+      phone: "+1 (555) 011-3443",
+      department: "Warehouse",
+      designation: "Forklift Operator",
+      address: "405 Industrial Parkway, Sector 4",
+      dateOfJoining: "2023-09-01",
+      shiftTiming: "04:00 PM - 12:00 AM",
+      salary: 38000,
+      status: "On Break",
+      performanceRating: 4.2,
+      emergencyContact: {
+        name: "Linda Vance",
+        relation: "Mother",
+        phone: "+1 (555) 011-3444",
+      },
+      photo: "",
+      documents: ["Forklift_License.pdf"],
+    },
+    {
+      id: "W-104",
+      name: "Aisha Rahman",
+      email: "aisha.r@workplace.com",
+      phone: "+1 (555) 017-7722",
+      department: "HR",
+      designation: "HR Coordinator",
+      address: "89 Maple Avenue, Flat 3B",
+      dateOfJoining: "2024-02-10",
+      shiftTiming: "09:00 AM - 05:00 PM",
+      salary: 48000,
+      status: "Active",
+      performanceRating: 4.6,
+      emergencyContact: {
+        name: "Tariq Rahman",
+        relation: "Father",
+        phone: "+1 (555) 017-7723",
+      },
+      photo: "",
+      documents: ["HR_Certification.pdf"],
+    },
+    {
+      id: "W-105",
+      name: "James O'Connor",
+      email: "james.oc@workplace.com",
+      phone: "+1 (555) 018-8811",
+      department: "Maintenance",
+      designation: "Electrical Tech",
+      address: "12 Dublin Way, Boston",
+      dateOfJoining: "2021-08-20",
+      shiftTiming: "12:00 AM - 08:00 AM",
+      salary: 46000,
+      status: "Night Shift",
+      performanceRating: 4.4,
+      emergencyContact: {
+        name: "Mary O'Connor",
+        relation: "Spouse",
+        phone: "+1 (555) 018-8812",
+      },
+      photo: "",
+      documents: ["Electrician_Cert.pdf"],
+    },
+    {
+      id: "W-106",
+      name: "Carlos Mendez",
+      email: "c.mendez@workplace.com",
+      phone: "+1 (555) 012-6543",
+      department: "Packing",
+      designation: "Packaging Supervisor",
+      address: "43 Ocean Drive, Miami",
+      dateOfJoining: "2023-05-18",
+      shiftTiming: "08:00 AM - 04:00 PM",
+      salary: 41000,
+      status: "Overtime",
+      performanceRating: 4.5,
+      emergencyContact: {
+        name: "Lucia Mendez",
+        relation: "Daughter",
+        phone: "+1 (555) 012-6544",
+      },
+      photo: "",
+      documents: ["Training_Cert.pdf"],
+    },
+    {
+      id: "W-107",
+      name: "Sarah Jenkins",
+      email: "s.jenkins@workplace.com",
+      phone: "+1 (555) 015-3210",
+      department: "Production",
+      designation: "Machine Operator",
+      address: "92 Pine Lane, Oakridge",
+      dateOfJoining: "2024-03-01",
+      shiftTiming: "08:00 AM - 04:00 PM",
+      salary: 35000,
+      status: "Leave",
+      performanceRating: 4.0,
+      emergencyContact: {
+        name: "David Jenkins",
+        relation: "Spouse",
+        phone: "+1 (555) 015-3211",
+      },
+      photo: "",
+      documents: [],
+    },
+    {
+      id: "W-108",
+      name: "Kenji Sato",
+      email: "k.sato@workplace.com",
+      phone: "+1 (555) 016-9900",
+      department: "Production",
+      designation: "Assembly Technician",
+      address: "50 Cherry Blossom Rd, Kyoto",
+      dateOfJoining: "2023-11-12",
+      shiftTiming: "08:00 AM - 04:00 PM",
+      salary: 39000,
+      status: "Idle",
+      performanceRating: 4.3,
+      emergencyContact: {
+        name: "Yuki Sato",
+        relation: "Sister",
+        phone: "+1 (555) 016-9901",
+      },
+      photo: "",
+      documents: [],
+    },
+    {
+      id: "W-109",
+      name: "Vikram Singh",
+      email: "v.singh@workplace.com",
+      phone: "+1 (555) 013-1122",
+      department: "Security",
+      designation: "Senior Security Officer",
+      address: "22 G.T. Road, Amritsar",
+      dateOfJoining: "2020-01-10",
+      shiftTiming: "04:00 PM - 12:00 AM",
+      salary: 34000,
+      status: "Completed Shift",
+      performanceRating: 4.7,
+      emergencyContact: {
+        name: "Gurpreet Kaur",
+        relation: "Spouse",
+        phone: "+1 (555) 013-1123",
+      },
+      photo: "",
+      documents: ["Security_Clearance.pdf"],
+    },
+    {
+      id: "W-110",
+      name: "Thomas Mueller",
+      email: "t.mueller@workplace.com",
+      phone: "+1 (555) 019-3355",
+      department: "Administration",
+      designation: "Office Administrator",
+      address: "15 Bavarian St, Munich",
+      dateOfJoining: "2022-09-15",
+      shiftTiming: "09:00 AM - 05:00 PM",
+      salary: 43000,
+      status: "Sick Leave",
+      performanceRating: 4.5,
+      emergencyContact: {
+        name: "Brigitte Mueller",
+        relation: "Mother",
+        phone: "+1 (555) 019-3356",
+      },
+      photo: "",
+      documents: [],
+    },
+  ],
+  attendance: [
+    // Pre-populate yesterday's attendance (2026-07-20)
+    {
+      id: "att-1",
+      workerId: "W-101",
+      date: "2026-07-20",
+      status: "Present",
+      checkIn: "07:55 AM",
+      checkOut: "04:05 PM",
+      overtimeHours: 0,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-20T16:05:00Z",
+    },
+    {
+      id: "att-2",
+      workerId: "W-102",
+      date: "2026-07-20",
+      status: "Present",
+      checkIn: "08:02 AM",
+      checkOut: "04:02 PM",
+      overtimeHours: 0,
+      lateEntryMinutes: 2,
+      lastUpdated: "2026-07-20T16:02:00Z",
+    },
+    {
+      id: "att-3",
+      workerId: "W-103",
+      date: "2026-07-20",
+      status: "Present",
+      checkIn: "03:50 PM",
+      checkOut: "12:05 AM",
+      overtimeHours: 0,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-21T00:05:00Z",
+    },
+    {
+      id: "att-4",
+      workerId: "W-104",
+      date: "2026-07-20",
+      status: "Present",
+      checkIn: "08:58 AM",
+      checkOut: "05:01 PM",
+      overtimeHours: 0,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-20T17:01:00Z",
+    },
+    {
+      id: "att-5",
+      workerId: "W-105",
+      date: "2026-07-20",
+      status: "Overtime",
+      checkIn: "11:45 PM",
+      checkOut: "09:00 AM",
+      overtimeHours: 1,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-20T09:00:00Z",
+    },
+    {
+      id: "att-6",
+      workerId: "W-106",
+      date: "2026-07-20",
+      status: "Overtime",
+      checkIn: "07:40 AM",
+      checkOut: "06:00 PM",
+      overtimeHours: 2,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-20T18:00:00Z",
+    },
+    {
+      id: "att-7",
+      workerId: "W-107",
+      date: "2026-07-20",
+      status: "Leave",
+      checkIn: "--:--",
+      checkOut: "--:--",
+      overtimeHours: 0,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-20T08:00:00Z",
+    },
+    {
+      id: "att-8",
+      workerId: "W-108",
+      date: "2026-07-20",
+      status: "Present",
+      checkIn: "08:15 AM",
+      checkOut: "04:00 PM",
+      overtimeHours: 0,
+      lateEntryMinutes: 15,
+      lastUpdated: "2026-07-20T16:00:00Z",
+    },
+    {
+      id: "att-9",
+      workerId: "W-109",
+      date: "2026-07-20",
+      status: "Present",
+      checkIn: "04:00 PM",
+      checkOut: "12:00 AM",
+      overtimeHours: 0,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-21T00:00:00Z",
+    },
+    {
+      id: "att-10",
+      workerId: "W-110",
+      date: "2026-07-20",
+      status: "Absent",
+      checkIn: "--:--",
+      checkOut: "--:--",
+      overtimeHours: 0,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-20T09:00:00Z",
+    },
+
+    // Pre-populate today's partial attendance (2026-07-21)
+    {
+      id: "att-11",
+      workerId: "W-101",
+      date: "2026-07-21",
+      status: "Present",
+      checkIn: "07:48 AM",
+      checkOut: "--:--",
+      overtimeHours: 0,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-21T07:48:00Z",
+    },
+    {
+      id: "att-12",
+      workerId: "W-102",
+      date: "2026-07-21",
+      status: "Present",
+      checkIn: "07:58 AM",
+      checkOut: "--:--",
+      overtimeHours: 0,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-21T07:58:00Z",
+    },
+    {
+      id: "att-14",
+      workerId: "W-104",
+      date: "2026-07-21",
+      status: "Present",
+      checkIn: "09:12 AM",
+      checkOut: "--:--",
+      overtimeHours: 0,
+      lateEntryMinutes: 12,
+      lastUpdated: "2026-07-21T09:12:00Z",
+    },
+    {
+      id: "att-17",
+      workerId: "W-107",
+      date: "2026-07-21",
+      status: "Leave",
+      checkIn: "--:--",
+      checkOut: "--:--",
+      overtimeHours: 0,
+      lateEntryMinutes: 0,
+      lastUpdated: "2026-07-21T08:00:00Z",
+    },
+  ],
+  leaveRequests: [
+    {
+      id: "leave-1",
+      workerId: "W-110",
+      workerName: "Thomas Mueller",
+      workerDept: "Administration",
+      startDate: "2026-07-20",
+      endDate: "2026-07-24",
+      type: "Sick Leave",
+      reason: "Fever and cold, doctors advised bed rest.",
+      status: "Approved",
+      createdAt: "2026-07-19T09:15:00Z",
+    },
+    {
+      id: "leave-2",
+      workerId: "W-107",
+      workerName: "Sarah Jenkins",
+      workerDept: "Production",
+      startDate: "2026-07-20",
+      endDate: "2026-07-21",
+      type: "Leave",
+      reason: "Family emergency.",
+      status: "Approved",
+      createdAt: "2026-07-18T14:20:00Z",
+    },
+    {
+      id: "leave-3",
+      workerId: "W-108",
+      workerName: "Kenji Sato",
+      workerDept: "Production",
+      startDate: "2026-07-25",
+      endDate: "2026-07-27",
+      type: "Vacation",
+      reason: "Short family trip.",
+      status: "Pending",
+      createdAt: "2026-07-21T10:30:00Z",
+    },
+  ],
+  auditLogs: [
+    {
+      id: "log-1",
+      timestamp: "2026-07-21T08:00:00Z",
+      user: "system@system.com",
+      action: "Shift Initialized",
+      details: "Morning shift active for Production, Quality and Admin.",
+    },
+    {
+      id: "log-2",
+      timestamp: "2026-07-21T08:15:00Z",
+      user: "hr@system.com",
+      action: "Leave Approved",
+      details: "Approved leave request for Sarah Jenkins (W-107).",
+    },
+    {
+      id: "log-3",
+      timestamp: "2026-07-21T09:12:00Z",
+      user: "supervisor@system.com",
+      action: "Late Entry Registered",
+      details: "Aisha Rahman (W-104) clocked in late (12 mins).",
+    },
+  ],
+  notifications: [
+    {
+      id: "notif-1",
+      title: "Worker Absent Alert",
+      message: "Thomas Mueller (W-110) marked absent today.",
+      type: "absent",
+      timestamp: "2026-07-21T09:30:00Z",
+      read: false,
+    },
+    {
+      id: "notif-2",
+      title: "Leave Approval Notification",
+      message: "Sarah Jenkins (W-107) leave request was approved.",
+      type: "leave",
+      timestamp: "2026-07-21T08:15:00Z",
+      read: true,
+    },
+    {
+      id: "notif-3",
+      title: "Birthday Notification",
+      message: "Happy Birthday to Robert Miller (W-101) today!",
+      type: "birthday",
+      timestamp: "2026-07-21T07:00:00Z",
+      read: false,
+    },
+  ],
+};
+
+// Main Database Client
+export const getDatabase = () => {
+  if (!fs.existsSync(DB_FILE)) {
+    saveDatabase(initialData);
+    return initialData;
+  }
+  try {
+    const raw = fs.readFileSync(DB_FILE, "utf-8");
+    return JSON.parse(raw);
+  } catch (err) {
+    console.error(
+      "Failed to read database. JSON might be corrupt. Resetting.",
+      err,
+    );
+    saveDatabase(initialData);
+    return initialData;
+  }
+};
+
+export const saveDatabase = (db) => {
+  fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2), "utf-8");
+};
+
+export const logActivity = (user, action, details) => {
+  const db = getDatabase();
+  const newLog = {
+    id: `log-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+    timestamp: new Date().toISOString(),
+    user,
+    action,
+    details,
+  };
+  db.auditLogs.unshift(newLog); // Put latest logs first
+  // Keep logs to a maximum of 500 entries
+  if (db.auditLogs.length > 500) {
+    db.auditLogs = db.auditLogs.slice(0, 500);
+  }
+  saveDatabase(db);
+};
