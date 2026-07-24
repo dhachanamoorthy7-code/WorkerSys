@@ -47,6 +47,18 @@
       "email": "nandhakumar6112005@gmail.com",
       "passwordHash": "123456",
       "role": "Supervisor"
+    },
+    {
+      "name": "Siva",
+      "email": "bksiva7588@gmail.com",
+      "passwordHash": "Siva123",
+      "role": "Admin"
+    },
+    {
+      "name": "gayathri",
+      "email": "gayusri601@gmail.com",
+      "passwordHash": "Gayu@123",
+      "role": "HR"
     }
   ],
   "departments": [
@@ -61,222 +73,158 @@
   ],
   "workers": [
     {
-      "id": "W-105",
-      "name": "James O'Connor",
-      "email": "james.oc@workplace.com",
-      "phone": "+1 (555) 018-8811",
-      "department": "Maintenance",
-      "designation": "Electrical Tech",
-      "address": "12 Dublin Way, Boston",
-      "dateOfJoining": "2021-08-20",
-      "shiftTiming": "12:00 AM - 08:00 AM",
-      "salary": 46000,
-      "status": "Night Shift",
-      "performanceRating": 4.4,
-      "emergencyContact": {
-        "name": "Mary O'Connor",
-        "relation": "Spouse",
-        "phone": "+1 (555) 018-8812"
-      },
-      "photo": "",
-      "documents": [
-        "Electrician_Cert.pdf"
-      ]
-    },
-    {
-      "id": "W-106",
-      "name": "Carlos Mendez",
-      "email": "c.mendez@workplace.com",
-      "phone": "+1 (555) 012-6543",
-      "department": "Packing",
-      "designation": "Packaging Supervisor",
-      "address": "43 Ocean Drive, Miami",
-      "dateOfJoining": "2023-05-18",
+      "id": "W-101",
+      "name": "Gayathri",
+      "email": "gayusri601@gmail.com",
+      "phone": "9360679278",
+      "department": "HR",
+      "designation": "HR",
+      "address": "chavadi",
+      "dateOfJoining": "2026-07-23",
       "shiftTiming": "08:00 AM - 04:00 PM",
-      "salary": 41000,
+      "salary": 110000,
       "status": "Overtime",
-      "performanceRating": 4.5,
+      "performanceRating": 5,
       "emergencyContact": {
-        "name": "Lucia Mendez",
-        "relation": "Daughter",
-        "phone": "+1 (555) 012-6544"
+        "name": "dhanushram",
+        "relation": "friend",
+        "phone": "6380269128"
       },
       "photo": "",
       "documents": [
-        "Training_Cert.pdf"
+        "Contract.pdf",
+        "ID_Proof.pdf"
       ]
-    },
-    {
-      "id": "W-107",
-      "name": "Sarah Jenkins",
-      "email": "s.jenkins@workplace.com",
-      "phone": "+1 (555) 015-3210",
-      "department": "Production",
-      "designation": "Machine Operator",
-      "address": "92 Pine Lane, Oakridge",
-      "dateOfJoining": "2024-03-01",
-      "shiftTiming": "08:00 AM - 04:00 PM",
-      "salary": 35000,
-      "status": "Leave",
-      "performanceRating": 4,
-      "emergencyContact": {
-        "name": "David Jenkins",
-        "relation": "Spouse",
-        "phone": "+1 (555) 015-3211"
-      },
-      "photo": "",
-      "documents": []
-    },
-    {
-      "id": "W-108",
-      "name": "Kenji Sato",
-      "email": "k.sato@workplace.com",
-      "phone": "+1 (555) 016-9900",
-      "department": "Production",
-      "designation": "Assembly Technician",
-      "address": "50 Cherry Blossom Rd, Kyoto",
-      "dateOfJoining": "2023-11-12",
-      "shiftTiming": "08:00 AM - 04:00 PM",
-      "salary": 39000,
-      "status": "Idle",
-      "performanceRating": 4.3,
-      "emergencyContact": {
-        "name": "Yuki Sato",
-        "relation": "Sister",
-        "phone": "+1 (555) 016-9901"
-      },
-      "photo": "",
-      "documents": []
-    },
-    {
-      "id": "W-110",
-      "name": "Thomas Mueller",
-      "email": "t.mueller@workplace.com",
-      "phone": "+1 (555) 019-3355",
-      "department": "Administration",
-      "designation": "Office Administrator",
-      "address": "15 Bavarian St, Munich",
-      "dateOfJoining": "2022-09-15",
-      "shiftTiming": "09:00 AM - 05:00 PM",
-      "salary": 43000,
-      "status": "Sick Leave",
-      "performanceRating": 4.5,
-      "emergencyContact": {
-        "name": "Brigitte Mueller",
-        "relation": "Mother",
-        "phone": "+1 (555) 019-3356"
-      },
-      "photo": "",
-      "documents": []
     }
   ],
   "attendance": [
     {
-      "id": "att-5",
-      "workerId": "W-105",
-      "date": "2026-07-20",
+      "id": "att-1784798429742",
+      "workerId": "W-101",
+      "date": "2026-07-23",
       "status": "Overtime",
-      "checkIn": "11:45 PM",
-      "checkOut": "09:00 AM",
-      "overtimeHours": 1,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-20T09:00:00Z"
-    },
-    {
-      "id": "att-6",
-      "workerId": "W-106",
-      "date": "2026-07-20",
-      "status": "Overtime",
-      "checkIn": "07:40 AM",
+      "checkIn": "08:00 AM",
       "checkOut": "06:00 PM",
       "overtimeHours": 2,
       "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-20T18:00:00Z"
-    },
-    {
-      "id": "att-7",
-      "workerId": "W-107",
-      "date": "2026-07-20",
-      "status": "Leave",
-      "checkIn": "--:--",
-      "checkOut": "--:--",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-20T08:00:00Z"
-    },
-    {
-      "id": "att-8",
-      "workerId": "W-108",
-      "date": "2026-07-20",
-      "status": "Present",
-      "checkIn": "08:15 AM",
-      "checkOut": "04:00 PM",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 15,
-      "lastUpdated": "2026-07-20T16:00:00Z"
-    },
-    {
-      "id": "att-10",
-      "workerId": "W-110",
-      "date": "2026-07-20",
-      "status": "Absent",
-      "checkIn": "--:--",
-      "checkOut": "--:--",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-20T09:00:00Z"
-    },
-    {
-      "id": "att-17",
-      "workerId": "W-107",
-      "date": "2026-07-21",
-      "status": "Leave",
-      "checkIn": "--:--",
-      "checkOut": "--:--",
-      "overtimeHours": 0,
-      "lateEntryMinutes": 0,
-      "lastUpdated": "2026-07-21T08:00:00Z"
+      "comments": "",
+      "lastUpdated": "2026-07-23T09:20:38.665Z"
     }
   ],
-  "leaveRequests": [
-    {
-      "id": "leave-1",
-      "workerId": "W-110",
-      "workerName": "Thomas Mueller",
-      "workerDept": "Administration",
-      "startDate": "2026-07-20",
-      "endDate": "2026-07-24",
-      "type": "Sick Leave",
-      "reason": "Fever and cold, doctors advised bed rest.",
-      "status": "Approved",
-      "createdAt": "2026-07-19T09:15:00Z"
-    },
-    {
-      "id": "leave-2",
-      "workerId": "W-107",
-      "workerName": "Sarah Jenkins",
-      "workerDept": "Production",
-      "startDate": "2026-07-20",
-      "endDate": "2026-07-21",
-      "type": "Leave",
-      "reason": "Family emergency.",
-      "status": "Approved",
-      "createdAt": "2026-07-18T14:20:00Z"
-    },
-    {
-      "id": "leave-3",
-      "workerId": "W-108",
-      "workerName": "Kenji Sato",
-      "workerDept": "Production",
-      "startDate": "2026-07-25",
-      "endDate": "2026-07-27",
-      "type": "Vacation",
-      "reason": "Short family trip.",
-      "status": "Pending",
-      "createdAt": "2026-07-21T10:30:00Z"
-    }
-  ],
+  "leaveRequests": [],
   "auditLogs": [
+    {
+      "id": "log-1784798438667-613",
+      "timestamp": "2026-07-23T09:20:38.667Z",
+      "user": "dhachanadhachanamoorthy7@gmail.com",
+      "action": "Attendance Marked",
+      "details": "Marked Gayathri (W-101) as Overtime on 2026-07-23."
+    },
+    {
+      "id": "log-1784798437307-757",
+      "timestamp": "2026-07-23T09:20:37.307Z",
+      "user": "dhachanadhachanamoorthy7@gmail.com",
+      "action": "Attendance Marked",
+      "details": "Marked Gayathri (W-101) as Present on 2026-07-23."
+    },
+    {
+      "id": "log-1784798436036-389",
+      "timestamp": "2026-07-23T09:20:36.036Z",
+      "user": "dhachanadhachanamoorthy7@gmail.com",
+      "action": "Attendance Marked",
+      "details": "Marked Gayathri (W-101) as Half Day on 2026-07-23."
+    },
+    {
+      "id": "log-1784798435427-782",
+      "timestamp": "2026-07-23T09:20:35.427Z",
+      "user": "dhachanadhachanamoorthy7@gmail.com",
+      "action": "Attendance Marked",
+      "details": "Marked Gayathri (W-101) as Absent on 2026-07-23."
+    },
+    {
+      "id": "log-1784798429745-644",
+      "timestamp": "2026-07-23T09:20:29.745Z",
+      "user": "dhachanadhachanamoorthy7@gmail.com",
+      "action": "Attendance Marked",
+      "details": "Marked Gayathri (W-101) as Absent on 2026-07-23."
+    },
+    {
+      "id": "log-1784798423891-915",
+      "timestamp": "2026-07-23T09:20:23.891Z",
+      "user": "dhachanadhachanamoorthy7@gmail.com",
+      "action": "Worker Created",
+      "details": "Added new worker Gayathri (W-101) in department HR."
+    },
+    {
+      "id": "log-1784798284892-296",
+      "timestamp": "2026-07-23T09:18:04.892Z",
+      "user": "dhachanadhachanamoorthy7@gmail.com",
+      "action": "User Login",
+      "details": "Dhachanamoorthi logged in successfully as Supervisor."
+    },
+    {
+      "id": "log-1784797104827-164",
+      "timestamp": "2026-07-23T08:58:24.827Z",
+      "user": "gayusri601@gmail.com",
+      "action": "User Login",
+      "details": "gayathri logged in successfully as HR."
+    },
+    {
+      "id": "log-1784797104817-849",
+      "timestamp": "2026-07-23T08:58:24.817Z",
+      "user": "gayusri601@gmail.com",
+      "action": "User Signup",
+      "details": "New user registered: gayathri as HR."
+    },
+    {
+      "id": "log-1784790537851-257",
+      "timestamp": "2026-07-23T07:08:57.851Z",
+      "user": "bksiva7588@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker Thomas Mueller (W-110) and related logs."
+    },
+    {
+      "id": "log-1784790529996-665",
+      "timestamp": "2026-07-23T07:08:49.996Z",
+      "user": "bksiva7588@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker Kenji Sato (W-108) and related logs."
+    },
+    {
+      "id": "log-1784790528229-738",
+      "timestamp": "2026-07-23T07:08:48.229Z",
+      "user": "bksiva7588@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker Sarah Jenkins (W-107) and related logs."
+    },
+    {
+      "id": "log-1784790526516-178",
+      "timestamp": "2026-07-23T07:08:46.516Z",
+      "user": "bksiva7588@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker Carlos Mendez (W-106) and related logs."
+    },
+    {
+      "id": "log-1784790524629-171",
+      "timestamp": "2026-07-23T07:08:44.629Z",
+      "user": "bksiva7588@gmail.com",
+      "action": "Worker Deleted",
+      "details": "Deleted worker James O'Connor (W-105) and related logs."
+    },
+    {
+      "id": "log-1784790510675-325",
+      "timestamp": "2026-07-23T07:08:30.675Z",
+      "user": "bksiva7588@gmail.com",
+      "action": "User Login",
+      "details": "Siva logged in successfully as Admin."
+    },
+    {
+      "id": "log-1784790510661-399",
+      "timestamp": "2026-07-23T07:08:30.661Z",
+      "user": "bksiva7588@gmail.com",
+      "action": "User Signup",
+      "details": "New user registered: Siva as Admin."
+    },
     {
       "id": "log-1784790217015-509",
       "timestamp": "2026-07-23T07:03:37.015Z",
