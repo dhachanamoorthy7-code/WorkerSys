@@ -4,6 +4,7 @@ import { AuthProvider } from "./context/AuthContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import { Layout } from "./components/layout/Layout";
+import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
 import { WorkerManagement } from "./pages/WorkerManagement";
@@ -21,11 +22,13 @@ export const App = () => {
           <BrowserRouter>
             <Routes>
               {/* Public Access */}
+              <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
 
               {/* Private Auth Layout */}
-              <Route path="/" element={<Layout />}>
-                <Route index element={<Dashboard />} />
+              <Route path="/app" element={<Layout />}>
+                <Route index element={<Navigate to="dashboard" replace />} />
+                <Route path="dashboard" element={<Dashboard />} />
                 <Route path="workers" element={<WorkerManagement />} />
                 <Route path="attendance" element={<AttendanceManagement />} />
                 <Route path="status-board" element={<WorkerStatusBoard />} />

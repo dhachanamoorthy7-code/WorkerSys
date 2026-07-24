@@ -11,6 +11,7 @@ import {
   LogOut,
   ChevronLeft,
   ChevronRight,
+  Home as HomeIcon,
 } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { useLanguage } from "../../context/LanguageContext";
@@ -22,42 +23,48 @@ export const Sidebar = ({ isOpen, setIsOpen, mobileOpen, setMobileOpen }) => {
   const menuItems = [
     {
       path: "/",
+      label: "Home Portal",
+      icon: HomeIcon,
+      roles: ["Admin", "HR", "Supervisor"],
+    },
+    {
+      path: "/app/dashboard",
       label: t("dashboard"),
       icon: LayoutDashboard,
       roles: ["Admin", "HR", "Supervisor"],
     },
     {
-      path: "/workers",
+      path: "/app/workers",
       label: t("workers"),
       icon: Users,
       roles: ["Admin", "HR", "Supervisor"],
     },
     {
-      path: "/attendance",
+      path: "/app/attendance",
       label: t("attendance"),
       icon: Calendar,
       roles: ["Admin", "HR", "Supervisor"],
     },
     {
-      path: "/status-board",
+      path: "/app/status-board",
       label: t("statusBoard"),
       icon: Activity,
       roles: ["Admin", "HR", "Supervisor"],
     },
     {
-      path: "/departments",
+      path: "/app/departments",
       label: t("departments"),
       icon: Building2,
       roles: ["Admin", "HR", "Supervisor"],
     },
     {
-      path: "/reports",
+      path: "/app/reports",
       label: t("reports"),
       icon: FileBarChart,
       roles: ["Admin", "HR", "Supervisor"],
     },
     {
-      path: "/admin",
+      path: "/app/admin",
       label: t("adminPanel"),
       icon: ShieldAlert,
       roles: ["Admin"],

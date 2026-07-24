@@ -38,7 +38,7 @@ export const Login = () => {
       });
       // Auto login upon successful registration
       await login({ email, password });
-      navigate("/");
+      navigate("/app");
     } catch (err) {
       setError(err.message || "Registration failed.");
     } finally {
@@ -52,7 +52,7 @@ export const Login = () => {
     setLoading(true);
     try {
       await login({ email, password });
-      navigate("/");
+      navigate("/app");
     } catch (err) {
       setError(err.message || "Invalid email or password");
     } finally {
@@ -199,7 +199,16 @@ export const Login = () => {
                 disabled={loading}
                 className="w-full rounded-xl bg-blue-600 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-blue-500/30 disabled:opacity-50"
               >
-                {loading ? "Logging in..." : "Sign In"}
+                {loading ? (
+                  <div className="flex flex-col items-center justify-center gap-0.5">
+                    <span>Logging in...</span>
+                    <span className="text-[10px] text-blue-200 font-normal normal-case">
+                      (Cold start: free server takes ~50s to wake up)
+                    </span>
+                  </div>
+                ) : (
+                  "Sign In"
+                )}
               </button>
 
               {/* Quick Login Shortcuts */}
@@ -329,7 +338,16 @@ export const Login = () => {
                 disabled={loading}
                 className="w-full rounded-xl bg-blue-600 py-3 text-sm font-semibold text-white shadow-lg hover:bg-blue-700 disabled:opacity-50"
               >
-                {loading ? "Creating Account..." : "Register"}
+                {loading ? (
+                  <div className="flex flex-col items-center justify-center gap-0.5">
+                    <span>Creating Account...</span>
+                    <span className="text-[10px] text-blue-200 font-normal normal-case">
+                      (Cold start: free server takes ~50s to wake up)
+                    </span>
+                  </div>
+                ) : (
+                  "Register"
+                )}
               </button>
 
               <div className="text-center">
